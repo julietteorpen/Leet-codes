@@ -12,15 +12,18 @@ function implement(haystack, needle) {
     answer = 0;
     //check that haystack includes needle
   } else if (haystack.includes(needle)) {
-    //if it does - loop through
+    //if it does - loop through haystack, increasing index each time
     do {
       index++;
-    } while (needle[altIndex] !== haystack[index]);
+    } while (
+      //while the elemnt in needle does NOT equal the elemnt in haystack
+      needle[altIndex] !== haystack[index]
+    );
     {
       match.push(haystack[index]);
     }
   }
-  return match.flat();
+  return answer;
 }
 
 console.log(implement("mississippi", "issip"));

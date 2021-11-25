@@ -9,17 +9,4 @@ first k elements. Return k after placing the final result in the first k slots
 of nums. Do not allocate extra space for another array. You must do this by
 modifying the input array in-place with O(1) extra memory. */
 
-function removeduplicates(nums, val) {
-  let j = 0;
-  //loop through numbers
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] != val) {
-      nums[i] = nums[j];
-      j++;
-    }
-  }
-  return j;
-}
-console.log(removeduplicates([0, 1, 2, 2, 3, 0, 4, 2], 2));
-
 //remove duplicates, leave result in first part of the array
