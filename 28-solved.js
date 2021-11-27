@@ -14,8 +14,6 @@ function implement(haystack, needle) {
     for (let i = 0; i < haystack.length; i++) {
       if (haystack.slice(i, length) !== needle) {
         length++;
-        console.log(haystack.slice(i, length));
-        console.log(i);
       } else if (haystack.slice(i, length) === needle) {
         answer = i;
       }

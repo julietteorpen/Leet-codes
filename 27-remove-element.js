@@ -7,15 +7,20 @@
 // It does not matter what you leave beyond the first k elements.
 // Return k after placing the final result in the first k slots of nums.
 
-function removeduplicates(nums, val) {
-  let j = 0;
-  //loop through numbers
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] != val) {
-      nums[i] = nums[j];
-      j++;
+function remove(nums, val) {
+  //create a variable with the value 0
+  let pointer = 0;
+  //loop through nums to find duplicates that match val
+  for (i = 0; i < nums.length; i++) {
+    // if the element does NOT match val, then assign it to the index of pointer and increment the value of pointer
+    if (nums[i] !== val) {
+      nums[pointer] = nums[i];
+      pointer++;
+      console.log(nums[i], pointer);
     }
   }
-  return j;
+  console.log(nums);
+  return pointer;
 }
-console.log(removeduplicates([0, 1, 2, 2, 3, 0, 4, 2], 2));
+
+console.log(remove([0, 1, 2, 2, 3, 0, 4, 2], 2));
